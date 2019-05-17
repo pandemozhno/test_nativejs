@@ -8,7 +8,10 @@
 			
 			var data = ["abc", "bac","abc", "d","et","d","et","zzz"];
 			var result = {};
-
+			
+			/*
+			** Добавляет к объектку result свойство === value и массив уникальных index
+			*/
 			function pushResult(value, index){
 				if(result[value] === undefined){
 					result[value] = []
@@ -18,9 +21,6 @@
 						result[value].push(index)
 					}
 				}
-
-				
-
 			}
 
 			/*
@@ -32,7 +32,10 @@
 			for(var i = 0; i < data.length; i++){
 				sorted.push(data[i].split("").sort().join(""))				
 			}
-
+			
+			/*
+			** Пороход и pushResult()
+			*/
 			sorted.forEach((element,index, array) => {
 
 				for(var i = 0; i < array.length; i++){
